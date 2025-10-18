@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Energy-Life-Assistant-Final ディレクトリ構造</title>
+<style>
+body {
+font-family: monospace;
+background-color: #f8f9fa;
+padding: 20px;
+}
+b {
+color: #2c3e50;
+}
+pre {
+background-color: #ecf0f1;
+padding: 10px;
+border-radius: 5px;
+overflow-x: auto;
+}
+h1 {
+font-family: sans-serif;
+color: #34495e;
+}
+</style>
+</head>
+<body>
+<h1>AI-Energy-Life-Assistant-Final ディレクトリ構造</h1>
+
+<b>ディレクトリ構造:</b>
+<pre>
+AI-Energy-Life-Assistant-Final/
+├── run_all.py # ワンクリック起動
+├── .env.example # 環境変数テンプレート
+├── .gitignore
+├── LICENSE
+├── README.md
+├── backend/ # FastAPI バックエンド
+│ ├── main.py # 静的ファイル配信対応済み
+│ ├── suggestion_engine.py
+│ ├── db.py
+│ ├── line_bot.py
+│ ├── voice_command_parser.py
+│ ├── iot_controller.py
+│ ├── requirements.txt
+│ └── data/
+│ ├── sample_energy.csv
+│ └── sample_transactions.csv
+└── frontend/ # React + Vite
+├── App.tsx
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── src/
+├── api.ts
+├── voice_command_processor.ts
+└── screens/
+├── Dashboard.tsx
+├── SuggestionsScreen.tsx
+├── HistoryChartScreen.tsx
+├── VoiceAssistant.tsx
+└── CommandTestScreen.tsx
+└── dist/ # ← npm run build で自動生成
+└── index.html # ここがルートアクセス用の HTML
+</pre>
+</body>
+</html>
